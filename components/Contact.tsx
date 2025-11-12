@@ -35,17 +35,17 @@ const Contact: React.FC = () => {
   return (
     <SectionWrapper id="contact" title="Контакты" className="bg-brand-bg-dark">
       <div className="max-w-3xl mx-auto text-center">
-        <p className="text-lg text-gray-300 mb-12">
-            Я всегда открыт для новых проектов, сотрудничества и интересных предложений. Свяжитесь со мной любым удобным для вас способом.
+        <p className="text-lg text-brand-text-secondary mb-12 leading-relaxed">
+            Открыт для новых проектов и интересных предложений. Свяжитесь со мной любым удобным способом.
         </p>
         <div className="flex flex-col items-center sm:items-start gap-6 w-fit mx-auto">
             {contactDetails.map((detail, index) => (
-                <a 
-                    key={index} 
-                    href={detail.link} 
-                    target="_blank" 
+                <a
+                    key={index}
+                    href={detail.link}
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 text-gray-300 hover:text-brand-accent transition-colors duration-300 group text-lg"
+                    className="flex items-center gap-4 text-brand-text-secondary hover:text-brand-accent transition-all duration-300 group text-lg font-medium p-3 rounded-lg hover:bg-brand-bg-light"
                 >
                     <span className="w-8 h-8 text-brand-accent group-hover:scale-110 transition-transform">{detail.icon}</span>
                     <span>{detail.text}</span>
