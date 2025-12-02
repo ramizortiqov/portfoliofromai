@@ -15,11 +15,11 @@ const skills: Skill[] = [
 ];
 
 const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => (
-    <div className="bg-brand-bg-light p-6 rounded-lg shadow-lg flex flex-col items-center justify-center transform hover:-translate-y-2 transition-transform duration-300">
-        <div className="w-16 h-16 mb-4 text-brand-accent">{skill.icon}</div>
-        <h3 className="text-xl font-semibold text-white mb-3">{skill.name}</h3>
-        <div className="w-full bg-gray-700 rounded-full h-2.5">
-            <div className="bg-brand-accent h-2.5 rounded-full" style={{ width: `${skill.level}%` }}></div>
+    <div className="bg-brand-bg-light p-6 rounded-lg border border-brand-bg-lighter flex flex-col items-center justify-center transform hover:-translate-y-2 hover:border-brand-accent hover:shadow-lg hover:shadow-brand-accent/20 transition-all duration-300 group">
+        <div className="w-16 h-16 mb-4 text-brand-accent group-hover:scale-110 transition-transform duration-300">{skill.icon}</div>
+        <h3 className="text-xl font-semibold text-brand-text-primary mb-3">{skill.name}</h3>
+        <div className="w-full bg-brand-bg-lighter rounded-full h-2.5 overflow-hidden">
+            <div className="bg-brand-accent h-2.5 rounded-full transition-all duration-500" style={{ width: `${skill.level}%` }}></div>
         </div>
     </div>
 );
